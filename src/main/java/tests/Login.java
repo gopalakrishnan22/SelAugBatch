@@ -3,20 +3,17 @@ package tests;
 import org.junit.Test;
 
 import wrappers.GenericWrappers;
+import wrappers.ProjectSpecificWrapper;
 
-public class Login extends GenericWrappers {
+public class Login extends ProjectSpecificWrapper {
 
-	@Test
-	public void createLead() {
-	
-		//GenericWrappers  = new GenericWrappers();
-		invokeApp("chrome", "http://leaftaps.com/opentaps");
-		enterById("username1", "DemoSalesManager");
-		enterById("password", "crmsfa");
-		clickByClassName("decorativeSubmit");
-		clickByClassName("decorativeSubmit");
-		closeBrowser();
+	public void creatLead() throws Exception {
+		ProjectSpecificWrapper ps = new ProjectSpecificWrapper();
+		
+		ps.login();
+		ps.clickByLink("Leads");
 	}
+	
 
 }
 

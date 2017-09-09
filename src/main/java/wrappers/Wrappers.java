@@ -5,28 +5,26 @@ public interface Wrappers {
 
 		
 		/**
-		 * This method will launch the given browser
-		 * and maximise the browser and set the
+		 * This method will launch the given browser and maximise the browser and set the
 		 * wait for 30 seconds and load the url
 		 * @author Babu - TestLeaf
-		 * @param browser - The browser of the application to be launched (chrome, firefox)
-		 * @param url - The url with http or https or file
-		 * @ 
+		 * @param browser - The browser of the application to be launched
+		 * @param url - The url with http or https
+		 * @throws Exception 
 		 * 
 		 */
-		public void invokeApp(String browser, String url) ;
+		public void invokeApp(String browser, String url) throws Exception;
 
 		/**
-		 * This method will enter the value to the text field
-		 *  using id attribute to locate
+		 * This method will enter the value to the text field using id attribute to locate
 		 * 
 		 * @param idValue - id of the webelement
 		 * @param data - The data to be sent to the webelement
 		 * @author Babu - TestLeaf
 		 * @return 
-		 * @ 
+		 * @throws Exception 
 		 */
-		public void enterById(String idValue, String data) ;
+		public void enterById(String idValue, String data) throws Exception;
 		
 		/**
 		 * This method will enter the value to the text field using name attribute to locate
@@ -35,7 +33,7 @@ public interface Wrappers {
 		 * @param data - The data to be sent to the webelement
 		 * @author Babu - TestLeaf
 		 */
-		public void enterByName(String nameValue, String data)  ;	
+		public void enterByName(String nameValue, String data)  throws Exception;	
 		
 		/**
 		 * This method will enter the value to the text field using xpath attribute to locate
@@ -44,7 +42,7 @@ public interface Wrappers {
 		 * @param data - The data to be sent to the webelement
 		 * @author Babu - TestLeaf
 		 */
-		public void enterByXpath(String xpathValue, String data) ;
+		public void enterByXpath(String xpathValue, String data) throws Exception;
 
 
 		/**
@@ -84,22 +82,22 @@ public interface Wrappers {
 		 * @param id  The id (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickById(String id)  ;
+		public void clickById(String id)  throws Exception;
 
 		/**
-		 * This method will click the element using classname as locator
+		 * This method will click the element using id as locator
 		 * @param id  The id (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
-		 * @ 
+		 * @throws Exception 
 		 */
-		public void clickByClassName(String classVal) ;
+		public void clickByClassName(String classVal) throws Exception;
 		
 		/**
 		 * This method will click the element using name as locator
 		 * @param name  The name (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickByName(String name)  ;
+		public void clickByName(String name)  throws Exception;
 		
 
 		/**
@@ -107,28 +105,28 @@ public interface Wrappers {
 		 * @param name  The link name (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickByLink(String name) ;
+		public void clickByLink(String name) throws Exception;
 		
 		/**
 		 * This method will click the element using link name as locator and do not take snap
 		 * @param name  The link name (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickByLinkNoSnap(String name) ;
+		public void clickByLinkNoSnap(String name) throws Exception;
 
 		/**
 		 * This method will click the element using xpath as locator
 		 * @param xpathVal  The xpath (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickByXpath(String xpathVal) ;
+		public void clickByXpath(String xpathVal) throws Exception;
 		
 		/**
 		 * This method will click the element using xpath as locator
 		 * @param xpathVal  The xpath (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
 		 */
-		public void clickByXpathNoSnap(String xpathVal) ;
+		public void clickByXpathNoSnap(String xpathVal) throws Exception;
 		
 		/**
 		 * This method will get the text of the element using id as locator
@@ -150,7 +148,7 @@ public interface Wrappers {
 		 * @param value The value to be selected (visibletext) from the dropdown 
 		 * @author Babu - TestLeaf
 		 */
-		public void selectVisibileTextById(String id, String value) ;
+		public void selectVisibileTextById(String id, String value) throws Exception;
 		
 		/**
 		 * This method will select the drop down using index as id locator
@@ -158,7 +156,7 @@ public interface Wrappers {
 		 * @param value The value to be selected (visibletext) from the dropdown 
 		 * @author Babu - TestLeaf
 		 */
-		public void selectIndexById(String id, int value) ;
+		public void selectIndexById(String id, int value) throws Exception;
 		
 		/**
 		 * This method will switch to the parent Window
@@ -194,7 +192,7 @@ public interface Wrappers {
 		 * This method will take snapshot of the browser
 		 * @author Babu - TestLeaf
 		 */
-		public void takeSnap();
+		public long takeSnap();
 			
 		/**
 		 * This method will close the active browser
