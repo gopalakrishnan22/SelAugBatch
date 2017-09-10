@@ -6,8 +6,8 @@ import wrappers.ProjectSpecificWrapper;
 
 
 public class EditLead extends ProjectSpecificWrapper {	
-
-	@Test(dependsOnMethods = "leaftaps.Lead.CreateLead.createLead")
+	@Test
+	//@Test(dependsOnMethods = "leaftaps.Lead.CreateLead.createLead")
 	public void editLead() throws Exception{
 		clickByLink("Leads");
 		clickByLink("Find Leads");

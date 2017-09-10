@@ -6,7 +6,7 @@ import wrappers.ProjectSpecificWrapper;
 
 public class DeleteLead extends ProjectSpecificWrapper{
 
-	@Test
+	@Test(groups = "smoke")
 	public void deleteLead() throws Exception {
 		
 		clickByLink("Leads");

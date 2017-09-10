@@ -22,23 +22,5 @@ public class PriorityTest {
   @Test(priority = -3)
   public void f4() {
 	  System.out.println("I am in f4");
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  }  
 }

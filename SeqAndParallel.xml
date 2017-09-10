@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeqAndParallel">
+	<parameter name="browserName" value="chrome"></parameter>
+	<parameter name="URL" value="http://192.168.1.17"></parameter>
+	<parameter name="password" value="crmsfa"></parameter>
+	<parameter name="userName" value="DemoSalesManager"></parameter>
+	<test name="parallel" parallel="classes" thread-count="2">
+		<classes>
+			<class name="leaftaps.Lead.CreateLead" />
+			<class name="leaftaps.Lead.DeleteLead" />
+		</classes>
+	</test> <!-- SeqAndParallel -->
+	<test name="sequential">
+		<parameter name="userName" value="DemoCSR"></parameter>
+		<classes>
+			<class name="leaftaps.Lead.DuplicateLead" />
+			<class name="leaftaps.Lead.EditLead" />
+		</classes>
+	</test> <!-- SeqAndParallel -->
+	<test name="sequential">
+		<classes>
+			<class name="leaftaps.Lead.DuplicateLead" />
+			<class name="leaftaps.Lead.EditLead" />
+		</classes>
+	</test> <!-- SeqAndParallel -->
+</suite> <!-- Suite -->

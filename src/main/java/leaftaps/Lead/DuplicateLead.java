@@ -6,7 +6,7 @@ import wrappers.ProjectSpecificWrapper;
 
 public class DuplicateLead extends ProjectSpecificWrapper{
 	
-	@Test
+	@Test(priority=16)
 	public void duplicateLead() throws Exception{
 		
 		clickByLink("Leads");

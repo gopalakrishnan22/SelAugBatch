@@ -1,4 +1,4 @@
-package tests;
+package testsCases;
 
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class Login extends ProjectSpecificWrapper {
 	public void creatLead() throws Exception {
 		ProjectSpecificWrapper ps = new ProjectSpecificWrapper();
 		
-		ps.login();
+	//	ps.login();
 		ps.clickByLink("Leads");
 	}
 	

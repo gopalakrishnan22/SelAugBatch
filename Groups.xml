@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="5">
+	<groups>
+		<run>
+			<include name="Common"></include>
+			<include name="smoke"></include>
+			<include name="sanity"></include>
+			<!-- <include name="*.123s.*"></include> -->
+			<exclude name="Regression"></exclude>
+		</run>
+	</groups>
+	<parameter name="browserName" value="chrome"></parameter>
+	<parameter name="URL" value="http://192.168.1.17"></parameter>
+	<parameter name="password" value="crmsfa"></parameter>
+	<parameter name="userName" value="DemoSalesManager"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="leaftaps.Contact.CreateContact" />
+			<class name="leaftaps.Contact.DeleteContact" />
+			<class name="leaftaps.Contact.EditContact" />
+			<class name="leaftaps.Contact.MergeContact" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

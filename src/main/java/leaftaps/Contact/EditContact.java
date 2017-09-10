@@ -7,7 +7,7 @@ import wrappers.ProjectSpecificWrapper;
 
 public class EditContact extends ProjectSpecificWrapper {
 
-	@Test
+	@Test(groups = {"sanity"}, dependsOnGroups={"smoke"})
 	public void editContact() throws Exception{
 		clickByLink("Contacts");
 		clickByLink("Find Contacts");

@@ -7,7 +7,7 @@ import wrappers.ProjectSpecificWrapper;
 
 public class MergeContact extends ProjectSpecificWrapper {
 	
-	@Test
+	@Test(groups = {"Regression"})
 	public void mergeContact() throws Exception{
 		clickByLink("Contacts");
 		clickByLink("Merge Contacts");

@@ -8,7 +8,7 @@ import wrappers.ProjectSpecificWrapper;
 public class DeleteContact extends ProjectSpecificWrapper {
 
 	
-	@Test
+	@Test(groups = {"sanity"}, dependsOnGroups={"smoke"})
 	public void deleteContact() throws Exception{
 		
 		clickByLink("Contacts");
